@@ -1,2 +1,2 @@
 # ecommerce
-have not implemented the search functionality.
+Ecommerce to buy fruits and veggies... Enjoy!!!
