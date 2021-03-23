@@ -110,25 +110,27 @@
         $("#fruits").hide();
         $("#veggies").show();
       }
-      // function searchfun(){
-      //   var input, filter, table, tr, td, i, txtValue;
-      //     input = document.getElementById("search");
-      //     filter = input.value.toUpperCase();
-      //     div = document.getElementsById("fruits");
-      //     div1=div.getElementsByTagName("div");
-      //     console.log(div1.length);
-      //    for (i = 0; i < div1.length; i++) {
-            //  div1= div[i].getElementsByTagName("div")[0];
-            // if (div1) {
-            //   txtValue = td.textContent || td.innerText;
-            //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            //     tr[i].style.display = "";
-            //   } else {
-            //     tr[i].style.display = "none";
-          //     }
-          //   }       
-          // }    
-    //  }
+      
+      function searchfun(){
+          input = document.getElementById("search");
+          filter = input.value.toUpperCase();
+        
+          div = document.getElementById("fandv");
+          div1=div.getElementsByTagName("div");
+          console.log(div1.length);
+          for (i = 0; i < div1.length; i++) {
+             div2= div1[i].getElementsByTagName("div")[0];
+              if (div2) {
+                txtValue = div2.textContent || div2.innerText;
+                console.log(txtValue);
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div2.style.display = "";
+                  } else {
+                    div2.style.display = "none";
+                  }
+              }       
+          }    
+        }
           mouseover=0;
         function change(){
             mouseover++;
@@ -165,7 +167,7 @@
           <li><a href="#">Deals</a></li>
           <li><a href="#">Stores</a></li>
           <li><a href="#">Contact</a></li>
-          <li><input type="search" id="search" class="form-control rounded" onkeyup="searchfun()" size="30" placeholder="Search"></li>
+          <li><input type="search" id="search" class="form-control rounded"  size="30" placeholder="Search"></li>
           <li>
             <button type="search" onclick="searchfun()">
               <i class="fa fa-search rounded"></i>
@@ -192,7 +194,7 @@
 <div id="fandv">
   <div class="container" id="veggies">
     <div class="row">
-      <div id="tomato" class="col-sm-4" >
+      <div id="tomato"  class="col-sm-4" >
         <div class="panel panel-primary ">
           <div class="panel-heading">Tomatoes </div>
           <div class="panel-body" ><img src="cart Images/tomato.jpg" class="img-responsive"
@@ -218,7 +220,7 @@
       </div>
       <div class="col-sm-4" id="chilli">
         <div class="panel panel-primary">
-          <div class="panel-heading">Chilli's</div>
+          <div class="panel-heading">Chilli</div>
           <div class="panel-body"><img src="cart Images/chilli.jpg" class="img-responsive"
               style="width:100%; height: 250px" alt="Image"></div>
           <div class="panel-footer">
@@ -234,7 +236,7 @@
     <div class="row">
       <div class="col-sm-4" id="strawberry">
         <div class="panel panel-primary ">
-          <div class="panel-heading">Strawberry's </div>
+          <div class="panel-heading">Strawberry </div>
           <div class="panel-body"><img id="strawberyImg" src="cart Images/strawbery.jpg" class="img-responsive"
               style="width:100%; height: 250px;" alt="Image"></div>
           <div class="panel-footer">
@@ -246,7 +248,7 @@
       </div>
       <div class="col-sm-4" id="mango">
         <div class="panel panel-primary">
-          <div class="panel-heading">Mango's</div>
+          <div class="panel-heading">Mango  </div>
           <div class="panel-body"><img src="cart Images/mango.jpg" class="img-responsive"
               style="width:100%;  height: 250px;" alt="Image"></div>
           <div class="panel-footer"><button id="tomatoButton" type="button" class="btn btn-primary">Buy Mango's</button>
@@ -256,7 +258,7 @@
       </div>
       <div class="col-sm-4" id="pineapple">
         <div class="panel panel-primary">
-          <div class="panel-heading">Pineapple's</div>
+          <div class="panel-heading">Pineapple</div>
           <div class="panel-body"><img src="cart Images/pineapple.jpg" class="img-responsive"
               style="width:100%; height: 230px" alt="Image"></div>
           <div class="panel-footer">
